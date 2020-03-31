@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TP_xamarin2.MainPage">
+
+    <StackLayout>
+        <!--navbar-->
+        <ContentView BackgroundColor="#58B0F0">
+            <StackLayout Orientation="Horizontal"
+                         Margin="10, 25">
+                <ImageButton Source="pencil.png"
+                             WidthRequest="35"
+                             BackgroundColor="Transparent"/>
+                <Label Text="Accueil"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="20"
+                       FontAttributes="Bold"/>
+                <ImageButton Source="search.png"
+                             WidthRequest="35"
+                             BackgroundColor="Transparent"/>
+            </StackLayout>
+        </ContentView>
+        <!--body-->
+        <ScrollView HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Vertical" Margin="10">
+                    <Label Text="Connexion à Twitter" 
+                           HorizontalTextAlignment="Center"
+                           TextColor="Gray" 
+                           FontAttributes="Bold"/>
+                    <Entry MaxLength="20" 
+                           Keyboard="Chat"
+                           ReturnType="Next"
+                           Placeholder="Identifiant Twitter"/>
+                    <Entry MaxLength="20"
+                           Keyboard="Chat"
+                           Placeholder="Mot de passe"
+                           IsPassword="True"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Mémoriser mes informations"
+                               VerticalTextAlignment="Center"
+                               FontSize="16"/>
+                        <Switch HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <Button Text="Se connecter"
+                            BackgroundColor="LightGray"
+                            TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             Margin="10">
+                    <Image Source="https://picsum.photos/50/50/?random"
+                           Aspect="AspectFit"
+                           WidthRequest="75"
+                           BackgroundColor="Transparent"/>
+                    <StackLayout Orientation="Vertical" 
+                                 HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Cedric" 
+                                   TextColor="Black"/>
+                            <Label Text="@cedricmillauriaux" 
+                                   TextColor="Gray"/>
+                            <Label Text="50s" 
+                                   TextColor="Gray" 
+                                   HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis. " 
+                               TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="reply.png"
+                                 WidthRequest="25"
+                                 HorizontalOptions="FillAndExpand"
+                                 BackgroundColor="Transparent"/>
+                    <ImageButton Source="retweet.png"
+                                 WidthRequest="25"
+                                 HorizontalOptions="FillAndExpand"
+                                 BackgroundColor="Transparent"/>
+                    <ImageButton Source="like.png"
+                                 WidthRequest="25"
+                                 HorizontalOptions="FillAndExpand"
+                                 BackgroundColor="Transparent"/>
+                </StackLayout>
+                <ContentView HeightRequest="2" 
+                             BackgroundColor="LightGray" 
+                             HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+        <!--footer-->
+        <ContentView VerticalOptions="EndAndExpand"
+                     HeightRequest="75">
+            <StackLayout Orientation="Horizontal" 
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Fil"
+                       TextColor="#63b4f0"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Notifications"
+                       TextColor="Gray"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Messages"
+                       TextColor="Gray"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Moi"
+                       TextColor="Gray"
+                       HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ContentView>
+    </StackLayout>
+
+</ContentPage>
