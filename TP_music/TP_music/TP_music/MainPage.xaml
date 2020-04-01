@@ -6,11 +6,24 @@
              mc:Ignorable="d"
              x:Class="TP_music.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <ListView x:Name="ListeMusiques">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding Pochette}" WidthRequest="50"/>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding Titre}" TextColor="DarkGray" />
+                            <Label Text="{Binding Auteur}" TextColor="LightGray" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Duree}" TextColor="LightGray" />
+                            <Label Text="s" TextColor="LightGray" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
 </ContentPage>
