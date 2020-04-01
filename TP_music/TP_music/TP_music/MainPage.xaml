@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="TP_music.MainPage">
 
-    <ListView x:Name="ListeMusiques">
+    <ListView x:Name="ListeMusiques" ItemSelected="ListeMusiques_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

@@ -25,5 +25,10 @@ namespace TP_music
 
             this.ListeMusiques.ItemsSource = this.musiques;
         }
+
+        private async void ListeMusiques_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e) {
+            var musique = (Musique)ListeMusiques.SelectedItem; 
+            await Navigation.PushAsync(new DetailsMusique(musique));
+        }
     }
 }
