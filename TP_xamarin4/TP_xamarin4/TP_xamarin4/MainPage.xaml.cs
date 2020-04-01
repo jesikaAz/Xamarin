@@ -1,13 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
+using TP_xamarin4.Services;
 using Xamarin.Forms;
 
 namespace TP_xamarin4
 {
-
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private ITwitterService twitterService = new TwitterService();
         public MainPage()
         {
             InitializeComponent();
@@ -22,23 +23,38 @@ namespace TP_xamarin4
             this.errorIdentifiant.IsVisible = false;
             this.errorPassword.IsVisible = false;
 
-            bool errorExist = false;
+            if (!isFormValid(identifiant, password))
+            {
+                return;
+            }
+
+            if (!this.twitterService.authenticate(identifiant, password))
+            {
+                this.errorAuth.IsVisible = true;
+                return;
+            } else {
+            this.tweets.IsVisible = true;
+            this.forms.IsVisible = false;
+            }
+        }
+
+        private bool isFormValid(String identifiant, String password)
+        {
+            bool isValid = true;
+
             if (String.IsNullOrEmpty(identifiant) || identifiant.Length < 3)
             {
-                errorExist = true;
+                isValid = false;
                 this.errorIdentifiant.IsVisible = true;
             }
 
             if (String.IsNullOrEmpty(password) || password.Length < 6)
             {
-                errorExist = true;
+                isValid = false;
                 this.errorPassword.IsVisible = true;
             }
 
-            if (errorExist) { return; }
-            this.tweets.IsVisible = true;
-            this.forms.IsVisible = false;
-            return;
+            return isValid;
         }
     }
 }

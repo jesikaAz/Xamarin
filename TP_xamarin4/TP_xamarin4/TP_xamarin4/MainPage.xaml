@@ -12,7 +12,7 @@
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal"
                          Margin="10, 25">
-                <ImageButton Source="{utils:ImageFromResources TP_xamarin3.Images.pencil.png}"
+                <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.pencil.png}"
                              WidthRequest="35"
                              BackgroundColor="Transparent"/>
                 <Label Text="Accueil"
@@ -22,7 +22,7 @@
                        TextColor="White"
                        FontSize="20"
                        FontAttributes="Bold"/>
-                <ImageButton Source="{utils:ImageFromResources TP_xamarin3.Images.search.png}"
+                <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.search.png}"
                              WidthRequest="35"
                              BackgroundColor="Transparent"/>
             </StackLayout>
@@ -39,6 +39,11 @@
                            HorizontalTextAlignment="Center"
                            TextColor="Gray" 
                            FontAttributes="Bold"/>
+                    <Label x:Name="errorAuth" 
+                           Text="Identifiants incorrects"
+                           IsVisible="False" 
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center"/>
                     <Entry x:Name="identifiant"
                            MaxLength="20" 
                            Keyboard="Chat"
@@ -92,15 +97,15 @@
                                TextColor="Black"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <ImageButton Source="{utils:ImageFromResources TP_xamarin3.Images.reply.png}"
+                        <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.reply.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
-                        <ImageButton Source="{utils:ImageFromResources TP_xamarin3.Images.retweet.png}"
+                        <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.retweet.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
-                        <ImageButton Source="{utils:ImageFromResources TP_xamarin3.Images.favorite.png}"
+                        <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.favorite.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
