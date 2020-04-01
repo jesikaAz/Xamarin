@@ -12,7 +12,7 @@
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal"
                          Margin="10, 25">
-                <ImageButton Source="pencil.png"
+                <ImageButton Source="{utils:ImageFromResources TP_xamarin2.Images.pencil.png}"
                              WidthRequest="35"
                              BackgroundColor="Transparent"/>
                 <Label Text="Accueil"
@@ -22,7 +22,7 @@
                        TextColor="White"
                        FontSize="20"
                        FontAttributes="Bold"/>
-                <ImageButton Source="search.png"
+                <ImageButton Source="{utils:ImageFromResources TP_xamarin2.Images.search.png}"
                              WidthRequest="35"
                              BackgroundColor="Transparent"/>
             </StackLayout>
@@ -77,15 +77,15 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <ImageButton Source="reply.png"
+                    <ImageButton Source="{utils:ImageFromResources TP_xamarin2.Images.reply.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
-                    <ImageButton Source="retweet.png"
+                    <ImageButton Source="{utils:ImageFromResources TP_xamarin2.Images.retweet.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
-                    <ImageButton Source="favorite.png"
+                    <ImageButton Source="{utils:ImageFromResources TP_xamarin2.Images.favorite.png}"
                                  WidthRequest="25"
                                  HorizontalOptions="FillAndExpand"
                                  BackgroundColor="Transparent"/>
