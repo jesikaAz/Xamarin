@@ -22,5 +22,12 @@ namespace TP_music
             this.auteur.Text = musique.Auteur; 
             this.duree.Text = musique.Duree + "s";
         }
+
+        public async void getJoke()
+        {
+            ChuckNorrisJokeSvc jokeSvc = new ChuckNorrisJokeSvc();
+            ChuckNorrisJoke joke = await jokeSvc.GetRandomChuckNorrisJokeAsync();
+            this.joke.Text = joke.value;
+        }
     }
 }

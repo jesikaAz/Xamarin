@@ -11,6 +11,7 @@
             <Label x:Name="titre" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="DarkGray"></Label>
             <Label x:Name="auteur" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="Gray"></Label>
             <Label x:Name="duree" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="LightGray"></Label>
+            <Label x:Name="joke" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
