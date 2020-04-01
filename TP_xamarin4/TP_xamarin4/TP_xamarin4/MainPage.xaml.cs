@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using TP_xamarin4.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TP_xamarin4
@@ -22,9 +23,17 @@ namespace TP_xamarin4
 
             this.errorIdentifiant.IsVisible = false;
             this.errorPassword.IsVisible = false;
+            this.errorInternet.IsVisible = false;
+            this.errorAuth.IsVisible = false;
 
             if (!isFormValid(identifiant, password))
             {
+                return;
+            }
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                this.errorInternet.IsVisible = true;
                 return;
             }
 
@@ -32,10 +41,10 @@ namespace TP_xamarin4
             {
                 this.errorAuth.IsVisible = true;
                 return;
-            } else {
+            }
+
             this.tweets.IsVisible = true;
             this.forms.IsVisible = false;
-            }
         }
 
         private bool isFormValid(String identifiant, String password)

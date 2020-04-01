@@ -44,6 +44,11 @@
                            IsVisible="False" 
                            TextColor="Red"
                            HorizontalTextAlignment="Center"/>
+                    <Label x:Name="errorInternet" 
+                           Text="Impossible de se connecter à Internet"
+                           IsVisible="False" 
+                           TextColor="Red"
+                           HorizontalTextAlignment="Center"/>
                     <Entry x:Name="identifiant"
                            MaxLength="20" 
                            Keyboard="Chat"
