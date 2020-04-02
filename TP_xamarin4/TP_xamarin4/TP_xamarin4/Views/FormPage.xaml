@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TP_xamarin4.Views.FormPage"
-             xmlns:include="clr-namespace:TP_xamarin4.Views">
+             xmlns:include="clr-namespace:TP_xamarin4.Views"
+             NavigationPage.HasNavigationBar="False">
     
     <ContentPage.Content>
         <StackLayout>
@@ -14,9 +15,7 @@
             <include:Header/>
             
             <!-- form-->
-            <StackLayout x:Name="ConnexionLayout"
-                     Orientation="Vertical"
-                     Margin="10">
+            <StackLayout x:Name="forms" Orientation="Vertical" Margin="10">
                 <Label Text="Connexion à Twitter" HorizontalTextAlignment="Center" TextColor="Black"/>
                 <Label x:Name="errorAuth" Text="Identifiants incorrects" IsVisible="False" TextColor="Red" HorizontalTextAlignment="Center"/>
                 <Label x:Name="errorInternet" Text="Veuillez vous connecter à Internet" IsVisible="False" TextColor="Red" HorizontalTextAlignment="Center"/>
@@ -30,10 +29,7 @@
                 </StackLayout>
                 <Button Text="Se connecter" BackgroundColor="#58B0F0" TextColor="Black" Clicked="Connection_Clicked"></Button>
             </StackLayout>
-            
-            <!-- footer-->
-            <include:Footer/>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
