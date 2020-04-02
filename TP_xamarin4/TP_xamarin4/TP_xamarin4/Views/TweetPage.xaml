@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TP_xamarin4.Views.TweetPage"
+             xmlns:utils="clr-namespace:TP_xamarin4.Utils"
+             xmlns:include="clr-namespace:TP_xamarin4.Views">
+
+    <StackLayout>
+        <!-- header-->
+        <include:Header/>
+
+        <!--body-->
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!-- tweets-->
+            <ListView x:Name="tweetsList" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout  x:Name="tweets" Orientation="Vertical">
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                        <!-- tweet -->
+                                        <StackLayout Orientation="Horizontal" Margin="10">
+                                            <Image Source="https://picsum.photos/50/50/?random" Aspect="AspectFit" WidthRequest="75" HeightRequest="75" BackgroundColor="Transparent"/>
+                                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="{Binding userName}" TextColor="Black"/>
+                                                    <Label Text="{Binding userPseudo}" TextColor="Black"/>
+                                                    <Label Text="{Binding createdAt}" TextColor="Gray" HorizontalOptions="EndAndExpand"/>
+                                                </StackLayout>
+                                                <Label Text="{Binding text}" TextColor="Black"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <!-- icons -->
+                                        <StackLayout Orientation="Horizontal">
+                                            <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.reply.png}" 
+                                                 WidthRequest="25"
+                                                 HeightRequest="25"
+                                                 Aspect="AspectFit"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 BackgroundColor="Transparent"/>
+                                            <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.retweet.png}" 
+                                                 Aspect="AspectFit"
+                                                 WidthRequest="25"
+                                                 HeightRequest="25"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 BackgroundColor="Transparent"/>
+                                            <ImageButton Source="{utils:ImageFromResources TP_xamarin4.Images.favorite.png}" 
+                                                 Aspect="AspectFit"
+                                                 WidthRequest="25"
+                                                 HeightRequest="25"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 BackgroundColor="Transparent"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <!--footer-->
+        <include:Footer/>
+
+    </StackLayout>
+</ContentPage>
