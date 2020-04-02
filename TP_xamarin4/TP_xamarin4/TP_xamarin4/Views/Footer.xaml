@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TP_xamarin4.Footer">
+             x:Class="TP_xamarin4.Views.Footer">
     <ContentView.Content>
         <StackLayout Orientation="Horizontal" HeightRequest="75" VerticalOptions="EndAndExpand">
             <Label Text="Fil" TextColor="#58B0F0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
