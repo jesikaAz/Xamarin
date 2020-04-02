@@ -1,6 +1,6 @@
 ﻿using System;
+using TP_xamarin4.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TP_xamarin4
 {
@@ -10,7 +10,7 @@ namespace TP_xamarin4
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new FormPage());
         }
 
         protected override void OnStart()
